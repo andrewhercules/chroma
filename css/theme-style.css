@@ -1,10 +1,10 @@
 /* Import Inter font and set as default on page */
 
-@import url('https://rsms.me/inter/inter.css');
+/* @import url('https://rsms.me/inter/inter.css');
 *, html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
 *, html { font-family: 'Inter var', sans-serif; }
-}
+} */
 
 .masthead {
   height: 100vh;
@@ -15,3 +15,52 @@
   background-repeat: no-repeat;
 }
 
+#pipeline-running-animation {
+  display:    none;
+  position:   fixed;
+  z-index:    1000;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
+  background: rgba( 255, 255, 255, .8 ) 
+              url('http://sampsonresume.com/labs/pIkfp.gif') 
+              50% 50% 
+              no-repeat;
+}
+
+
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading #pipeline-running-animation {
+    display: block;
+}
+
+#pipeline-results {
+  display: none;
+}
+
+body.finished-loading #pipeline-results {
+  display: block;
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
