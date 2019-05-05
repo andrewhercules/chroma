@@ -87,7 +87,8 @@
 
         <div class="col-lg-8 mx-auto card" id="pipeline-results">
           <h2 id="target-name"></h2>
-          <p>Description: lorem ipsum</p>
+          <p id="target-description"></p>
+          <button class="btn btn-primary" id="rerun-pipeline-btn">Re-run pipeline</button>
         </div>
 
       </div>
@@ -98,9 +99,32 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+          <h2>Citation</h2>
+          <p class="lead">
+            If you found this tool useful and have integrated it into your own bioinformatics or drug discovery pipelines,
+            please cite our paper.
+          </p>
         </div>
+
+        <div class="col-lg-8 mx-auto" id="citation-block">
+
+            <form>
+                <div class="form-group">
+                  <label for="selectCitationStyle">Select citation style</label>
+                  <select class="form-control" id="selectCitationStyle">
+                    <option>APA</option>
+                    <option>MLA</option>
+                    <option>Chicago</option>
+                    <option>Harvard</option>
+                    <option>Oxford</option>
+                  </select>
+                </div>
+                <button type="submit">Get citation</button>
+              </form>
+
+        </div>
+
+
       </div>
     </div>
   </section>
@@ -108,7 +132,10 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-white">
+        Note: this is not a real bioinformatics tool. 
+        It was built to support a workshops on event tracking in Google Analytics.
+      </p>
     </div>
     <!-- /.container -->
   </footer>
