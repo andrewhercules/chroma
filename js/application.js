@@ -28,32 +28,40 @@ targets = [
 citations = [
   {
     "style": "APA",
-    "citation": "Hercules, A. (2019). Trendy Tools: Colour Theory meets Genetics. Nature, 186(5), 36-42. doi: 10.1025/nat-030291929882."
+    "citation": "Hercules, A. (2019). Target Of The Year: the application of colour theory and design to bioinformatics. Nature Design, 1(1), 5-10."
   },
   {
     "style": "Chicago",
-    "citation": 'Hercules, Andrew. "Trendy Tools: Colour Theory meets Genetics." Nature 186, no. 5 (2019). doi: 10.1025/nat-030291929882'
+    "citation": 'Hercules, Andrew. "Target Of The Year: the application of colour theory and design to bioinformatics." Nature Design 1, no. 1 (2019): 5-10'
+  },
+  {
+    "style": "Harvard",
+    "citation": "Hercules, A 2019, 'Target Of The Year: the application of colour theory and design to bioinformatics', Nature Design, vol. 1, no. 1, pp. 5-10."
   },
   {
     "style": "MLA",
-    "citation": 'Hercules, Andrew. "Trendy Tools: Colour Theory meets Genetics." Nature, vol 186, no. 5, 2019, pp. 36-42.'
-   }
+    "citation": 'Hercules, Andrew. "Target Of The Year: the application of colour theory and design to bioinformatics." Nature Design, vol. 1, no. 1, 2019, pp. 5-10.'
+  },
+  {
+    "style": "Oxford",
+    "citation": "Hercules, A., 'Target Of The Year: the application of colour theory and design to bioinformatics',  Nature Design, vol. 1, no. 1, 2019, pp. 5-10."
+  }
 ];
 
-$( document ).ready(function() {
-  console.log( "ready!" );
+$(document).ready(function () {
+  console.log("ready!");
   console.log(targets[0])
 });
 
 
 
 // Show spinner for 3 seconds, then return to original screen
-$('#run-pipeline-btn').on("click", function(event){
+$('#run-pipeline-btn').on("click", function (event) {
   event.preventDefault();
   $("body").addClass("loading");
-  setTimeout(function(){ 
+  setTimeout(function () {
     $("body").removeClass("loading");
-    $("body").addClass("finished-loading"); 
+    $("body").addClass("finished-loading");
     $('#run-pipeline-btn').hide();
     $('#run-pipeline-block').hide();
     selectTarget()
@@ -67,13 +75,13 @@ function selectTarget() {
 }
 
 // Show spinner for 3 seconds, then return to original screen
-$('#rerun-pipeline-btn').on("click", function(){
+$('#rerun-pipeline-btn').on("click", function () {
   $('#pipeline-results').hide();
   $("body").addClass("loading");
-  setTimeout(function(){ 
+  setTimeout(function () {
     $("body").removeClass("loading");
     $("body").addClass("finished-loading");
-    $('#pipeline-results').show(); 
+    $('#pipeline-results').show();
     $('#run-pipeline-btn').hide();
     selectTarget()
   }, 500);
