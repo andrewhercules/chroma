@@ -1,10 +1,10 @@
 /* Import Inter font and set as default on page */
 
-/* @import url('https://rsms.me/inter/inter.css');
+@import url('https://rsms.me/inter/inter.css');
 *, html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
 *, html { font-family: 'Inter var', sans-serif; }
-} */
+}
 
 .masthead {
   height: 100vh;
@@ -43,4 +43,10 @@ body.loading #pipeline-running-animation {
 
 body.finished-loading #pipeline-results {
   display: block;
+}
+
+.divider {
+  width: 300px;
+  height: 5px;
+  background-color: white;
 }

@@ -47,7 +47,7 @@
             <a class="nav-link js-scroll-trigger" href="#about">Learn More</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Discover Your Target</a>
+            <a class="nav-link js-scroll-trigger" href="#services">Try it out!</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Citation</a>
@@ -58,36 +58,52 @@
   </nav>
 
   <header class="masthead">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div class="col-12 text-center">
-          <h1 class="font-weight-light">Target Of The Year</h1>
-          <p class="lead">Discover your newest therapeutic drug targets</p>
+      <div class="container h-100">
+          <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+              <h1 class="text-uppercase text-white font-weight-bold">Target of the Year</h1>
+              <hr class="divider">
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+              <h3 class="text-white font-weight-light mb-5">Colour Theory + Design + Bioinformatics</h3>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
   </header>
 
   <section id="about">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>About this page</h2>
-          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so
-            you can use it as a boilerplate or starting point for you own landing page designs! This template features:
+          <h2>Learn More</h2>
+          <p class="lead">
+            Move over Pantone Colour Of The Year!
           </p>
+          <p class="lead">
+            Target Of The Year is a revolutionary bioinformatics and design pipeline that assigns all known genes a "colour profile" using colour theory. We believe that colour theory can help researchers find new therapeutic drug targets because each target has various attributes that we have mapped to established colour theory principles. These principles have guided the development of brands, logos, and colour palettes for more than 50 years - and now, we believe it's time for colour theory to guide the development of new therapeutic drugs . 
+          </p>
+          <p class="lead">
+              Our pipeline: 
+            </p>
           <ul>
-            <li>Clickable nav links that smooth scroll to page sections</li>
-            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+            <li>Assembles a list of all known genes in the human genome</li>
+            <li>Assesses each gene's attributes using our pipeline</li>
+            <li>Integrates data from a variety of bioinformatics sources, including ChEMBL, DrugBank, Ensembl, UniProt, and Open Targets</li>
+            <li>Provides users with information about each target along with relevant external links for further analysis</li>
           </ul>
+          <p class="lead">
+              To learn more about the pipeline, read <a href="#">our paper in <i>Nature Design</i></a> or check out <a href="#">our code on GitHub</a>. 
+          </p>
+          <div class="text-center">
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#target-of-the-year">Try Target Of The Year</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="bg-light">
+  <section id="target-of-the-year" class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -200,9 +216,8 @@
         <div class="col-lg-8 mx-auto">
           <h2>Citation</h2>
           <p class="lead">
-            If you found this tool useful and have integrated it into your own bioinformatics or drug discovery
-            pipelines,
-            please cite our paper.
+            If you found this tool useful and have integrated it into your drug discovery
+            pipelines, please cite <a href="#">our paper in <i>Nature Designs</i></a>.
           </p>
         </div>
 
@@ -212,6 +227,7 @@
             <div class="form-group">
               <label for="selectCitationStyle">Select citation style</label>
               <select class="form-control" id="selectCitationStyle">
+                <option disabled selected>Select ...</option>
                 <option>APA</option>
                 <option>MLA</option>
                 <option>Chicago</option>
@@ -219,7 +235,12 @@
                 <option>Oxford</option>
               </select>
             </div>
-            <button type="submit">Get citation</button>
+            <div class="form-row">
+                <div class="form-group">
+                  <button class="btn btn-primary" id="get-citation-btn">Get citation</button>
+                </div>
+              </div>
+    
           </form>
 
         </div>
