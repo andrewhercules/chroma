@@ -25,28 +25,14 @@ targets = [
   },
 ]
 
-citations = [
-  {
-    "style": "APA",
-    "citation": "Hercules, A. (2019). Target Of The Year: the application of colour theory and design to bioinformatics. Nature Design, 1(1), 5-10."
-  },
-  {
-    "style": "Chicago",
-    "citation": 'Hercules, Andrew. "Target Of The Year: the application of colour theory and design to bioinformatics." Nature Design 1, no. 1 (2019): 5-10'
-  },
-  {
-    "style": "Harvard",
-    "citation": "Hercules, A 2019, 'Target Of The Year: the application of colour theory and design to bioinformatics', Nature Design, vol. 1, no. 1, pp. 5-10."
-  },
-  {
-    "style": "MLA",
-    "citation": 'Hercules, Andrew. "Target Of The Year: the application of colour theory and design to bioinformatics." Nature Design, vol. 1, no. 1, 2019, pp. 5-10.'
-  },
-  {
-    "style": "Oxford",
-    "citation": "Hercules, A., 'Target Of The Year: the application of colour theory and design to bioinformatics',  Nature Design, vol. 1, no. 1, 2019, pp. 5-10."
-  }
-];
+citations = {
+  "apa": "Hercules, A. (2019). Target Of The Year: the application of colour theory and design to bioinformatics. Nature Design, 1(1), 5-10.",
+  "chicago": 'Hercules, Andrew. "Target Of The Year: the application of colour theory and design to bioinformatics." Nature Design 1, no. 1 (2019): 5-10',
+  "harvard": "Hercules, A 2019, 'Target Of The Year: the application of colour theory and design to bioinformatics', Nature Design, vol. 1, no. 1, pp. 5-10.",
+  "mla": 'Hercules, Andrew. "Target Of The Year: the application of colour theory and design to bioinformatics." Nature Design, vol. 1, no. 1, 2019, pp. 5-10.',
+  "oxford": "Hercules, A., 'Target Of The Year: the application of colour theory and design to bioinformatics',  Nature Design, vol. 1, no. 1, 2019, pp. 5-10."
+},
+
 
 $(document).ready(function () {
   console.log("ready!");
@@ -85,4 +71,12 @@ $('#rerun-pipeline-btn').on("click", function () {
     $('#run-pipeline-btn').hide();
     selectTarget()
   }, 500);
+});
+
+$('#get-citation-btn').on("click", function(event) {
+  event.preventDefault();
+  $('body').addClass('citation-style-selected');
+  var selectedCitationStyle = $('#selectCitationStyle').val()
+  var citationText = citations[selectedCitationStyle];
+  $('#citation-text').text(citationText);
 });

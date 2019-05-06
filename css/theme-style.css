@@ -37,11 +37,16 @@ body.loading #pipeline-running-animation {
     display: block;
 }
 
-#pipeline-results {
+#pipeline-results,
+#citation-results {
   display: none;
 }
 
 body.finished-loading #pipeline-results {
+  display: block;
+}
+
+body.citation-style-selected #citation-results {
   display: block;
 }
 

@@ -216,35 +216,37 @@
         <div class="col-lg-8 mx-auto">
           <h2>Citation</h2>
           <p class="lead">
-            If you found this tool useful and have integrated it into your drug discovery
-            pipelines, please cite <a href="#">our paper in <i>Nature Designs</i></a>.
+            If you found this tool useful and have integrated it into your own pipeline, please cite <a href="#">our paper in <i>Nature Designs</i></a>.
           </p>
         </div>
 
         <div class="col-lg-8 mx-auto" id="citation-block">
 
-          <form>
-            <div class="form-group">
-              <label for="selectCitationStyle">Select citation style</label>
-              <select class="form-control" id="selectCitationStyle">
-                <option disabled selected>Select ...</option>
-                <option>APA</option>
-                <option>MLA</option>
-                <option>Chicago</option>
-                <option>Harvard</option>
-                <option>Oxford</option>
-              </select>
-            </div>
+          <form class="form-inline">
             <div class="form-row">
-                <div class="form-group">
-                  <button class="btn btn-primary" id="get-citation-btn">Get citation</button>
-                </div>
+              <div class="form-group mr-sm-2 mb-3">
+                <select class="form-control" id="selectCitationStyle">
+                  <option disabled selected>Select citation style...</option>
+                  <option value="apa">APA</option>
+                  <option value="mla">MLA</option>
+                  <option value="chicago">Chicago</option>
+                  <option value="harvard">Harvard</option>
+                  <option value="oxford">Oxford</option>
+                </select>
               </div>
-    
+              <button class="btn btn-primary mb-3" id="get-citation-btn">Get citation</button>
+            </div>
           </form>
-
         </div>
 
+
+        <div class="col-lg-8 mx-auto card text-center py-4" id="citation-results">
+            <h5>Citation</h5>
+            <p id="citation-text"></p>
+            <button class="btn btn-light mx-2">Copy to clipboard</button>
+            <button class="btn btn-light mx-2">Download RefWorks</button>
+            <button class="btn btn-light mx-2">Download EndNote</button>
+          </div>
 
       </div>
     </div>
