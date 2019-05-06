@@ -48,12 +48,14 @@ $( document ).ready(function() {
 
 
 // Show spinner for 3 seconds, then return to original screen
-$('#run-pipeline-btn').on("click", function(){
+$('#run-pipeline-btn').on("click", function(event){
+  event.preventDefault();
   $("body").addClass("loading");
   setTimeout(function(){ 
     $("body").removeClass("loading");
     $("body").addClass("finished-loading"); 
     $('#run-pipeline-btn').hide();
+    $('#run-pipeline-block').hide();
     selectTarget()
   }, 500);
 
