@@ -19,10 +19,12 @@
 
   <!-- Google Analytics -->
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-139200733-1', 'auto');
     ga('send', 'pageview');
   </script>
@@ -35,7 +37,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Target Of The Year</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -70,7 +73,9 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>About this page</h2>
-          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so
+            you can use it as a boilerplate or starting point for you own landing page designs! This template features:
+          </p>
           <ul>
             <li>Clickable nav links that smooth scroll to page sections</li>
             <li>Responsive behavior when clicking nav links perfect for a one page website</li>
@@ -87,13 +92,97 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Target Of The Year</h2>
-          <p class="lead">
-            To run the pipeline, simply answer these two questions:
-          </p>
-          <button class="btn btn-primary" id="run-pipeline-btn">Run pipeline</button>
+          <div id="run-pipeline-block">
+              <p class="lead">
+                  To run the pipeline, please answer these two questions.
+                </p>
+      
+                <form>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="select-reserach-area">1.) What is your current research focus area?</label>
+                      <select id="select-reserach-area" class="form-control">
+                        <option disabled selected>Select ...</option>
+                        <option value="oncology">Oncology</option>
+                        <option value="neurodegeneration">Neurology</option>
+                        <option value="immunology">Cardiology</option>
+                        <option value="endocrinology">Endocrinology</option>
+                        <option value="pulmonology">Pulmonology</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="inputEmail4">2.) What is your favourite colour?</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                        <label class="form-check-label" for="exampleRadios1">
+                          Blue
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Brown
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Green
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Orange
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Pink
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Purple
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Red
+                        </label>
+                      </div>
+      
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Yellow
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <button class="btn btn-primary" id="run-pipeline-btn">Run pipeline</button>
+                    </div>
+                  </div>
+      
+      
+      
+                </form>
+          </div>
+
+
+
+
         </div>
 
-        
+
 
         <div class="col-lg-8 mx-auto card" id="pipeline-results">
           <h2 id="target-name"></h2>
@@ -111,26 +200,27 @@
         <div class="col-lg-8 mx-auto">
           <h2>Citation</h2>
           <p class="lead">
-            If you found this tool useful and have integrated it into your own bioinformatics or drug discovery pipelines,
+            If you found this tool useful and have integrated it into your own bioinformatics or drug discovery
+            pipelines,
             please cite our paper.
           </p>
         </div>
 
         <div class="col-lg-8 mx-auto" id="citation-block">
 
-            <form>
-                <div class="form-group">
-                  <label for="selectCitationStyle">Select citation style</label>
-                  <select class="form-control" id="selectCitationStyle">
-                    <option>APA</option>
-                    <option>MLA</option>
-                    <option>Chicago</option>
-                    <option>Harvard</option>
-                    <option>Oxford</option>
-                  </select>
-                </div>
-                <button type="submit">Get citation</button>
-              </form>
+          <form>
+            <div class="form-group">
+              <label for="selectCitationStyle">Select citation style</label>
+              <select class="form-control" id="selectCitationStyle">
+                <option>APA</option>
+                <option>MLA</option>
+                <option>Chicago</option>
+                <option>Harvard</option>
+                <option>Oxford</option>
+              </select>
+            </div>
+            <button type="submit">Get citation</button>
+          </form>
 
         </div>
 
@@ -143,7 +233,7 @@
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">
-        Note: this is not a real bioinformatics tool. 
+        Note: this is not a real bioinformatics tool.
         It was built to support a workshops on event tracking in Google Analytics.
       </p>
     </div>
@@ -151,7 +241,7 @@
   </footer>
 
   <div id="pipeline-running-animation"></div>
-  
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
