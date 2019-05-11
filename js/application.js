@@ -16,16 +16,18 @@ $(document).ready(function () {
 // Show spinner for 3 seconds, then return to original screen
 $('#run-pipeline-btn').on("click", function (event) {
   event.preventDefault();
+  $('#run-pipeline-block').hide();
   $("body").addClass("loading");
   // add event to track that pipeline has started to run
   setTimeout(function () {
     // add event to track that pipeline has finished running
+    
     $("body").removeClass("loading");
     $("body").addClass("finished-loading");
     $('#run-pipeline-btn').hide();
-    $('#run-pipeline-block').hide();
+    
     selectGene()
-  }, 500);
+  }, 5500);
 
 });
 
@@ -54,7 +56,7 @@ $('#rerun-pipeline-btn').on("click", function () {
     selectGene()
     $('#run-pipeline-btn').hide();
     
-  }, 500);
+  }, 5500);
 });
 
 $('#get-citation-btn').on("click", function(event) {
