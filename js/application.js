@@ -68,3 +68,10 @@ $('#get-citation-btn').on("click", function(event) {
 $('select[name="selectCitationStyle"]').change(function() {
   $('#get-citation-btn').css('display', 'inline-block')
 });
+
+$('#clear-pipeline-results-btn').on('click', function(event){
+  event.preventDefault();
+  $('#pipeline-results').hide();
+  $('#run-pipeline-btn').show();
+  $('#run-pipeline-block').show();
+});
