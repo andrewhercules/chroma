@@ -6,6 +6,10 @@
 *, html { font-family: 'Inter var', sans-serif; }
 }
 
+*, html {
+  color: #2D2D29;
+}
+
 .masthead {
   height: 100vh;
   min-height: 500px;
@@ -50,8 +54,49 @@ body.citation-style-selected #citation-results {
   display: block;
 }
 
-.divider {
-  width: 300px;
+.header-divider {
+  width: 500px;
   height: 5px;
   background-color: white;
 }
+
+.section-header-divider {
+  width: 300px;
+  height: 2px;
+  background-color: #215A6D
+}
+
+h1 {
+  font-size: 110px;
+}
+
+
+.bg-dark-blue {
+  background-color: #2D2D29;
+}
+
+.btn-primary {
+  background-color: #215A6D;
+  border: 1px solid #215A6D;
+}
+
+.btn-primary:hover {
+  background-color: #215A6D;
+  opacity: 0.75;
+}
+
+a,
+a:hover {
+  color: #3CA2A2
+}
+
+#get-citation-btn {
+  display: none;
+}
+
+/* .btn:focus,.btn:active {
+  background-color: orange
+  border: 1px solid #215A6D;
+  outline: none !important;
+  box-shadow: none;
+} */
