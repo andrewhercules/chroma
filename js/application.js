@@ -1,31 +1,3 @@
-genes = [
-  {
-    "ensemblId": "12345",
-    "uniprotId": "P12345",
-    "hgncSymbol": "ESR1",
-    "description": "estrogen receptor 1",
-    "therapeuticArea": "oncology",
-    "pipelineColour": "grey",
-    "pipelineAssessment": "ESR1 has been implicated in a number of cancers and there are approved drugs in Phase IV that are known to modulate this target."
-  },
-  {
-    "ensemblId": "67890",
-    "uniprotId": "P67890",
-    "hgncSymbol": "APP",
-    "description": "amyloid precursor protein",
-    "therapeuticArea": "neurology",
-    "pipelineColour": "blue",
-  },
-  {
-    "ensemblId": "54321",
-    "uniprotId": "P54321",
-    "hgncSymbol": "INSR",
-    "description": "insulin receptor",
-    "therapeuticArea": "immunology",
-    "pipelineColour": "green",
-  },
-]
-
 citations = {
   "apa": "Hercules, A & Averbrook, G. (2019). Target Of The Year: the application of colour theory and design to bioinformatics. Nature Design, 1(1), 5-10.",
   "chicago": 'Hercules, Andrew and Gillian Averbrook. "Target Of The Year: the application of colour theory and design to bioinformatics." Nature Design 1, no. 1 (2019): 5-10',
