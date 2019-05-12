@@ -1,5 +1,16 @@
 $(document).ready(function () {
 
+  
+  // Show all tooltips
+  $('[data-toggle="tooltip"]').tooltip(); 
+
+  // Log that user has hovered on the colour theory definition tooltip
+  $('#colour-theory-tooltip').hover(function() {
+    console.log('hovering on colour theory definition tooltip')
+  });
+  
+  
+
   // After user has answered two questions, run pipeline to generate and display response after 3 seconds
   $('#run-pipeline-btn').on("click", function (event) {
     $('#run-pipeline-block').hide();
