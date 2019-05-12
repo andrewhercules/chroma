@@ -5,17 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
   <title>CHROMA - Colour Theory + Bioinformatics</title>
-
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/theme-style.css" rel="stylesheet">
-
+  <!-- Custom CSS for CHROMA app -->
+  <link href="css/chroma-app-style.css" rel="stylesheet">
   <!-- Google Analytics -->
   <script>
     (function (i, s, o, g, r, a, m) {
@@ -32,7 +26,6 @@
 
 <body id="page-top">
 
-  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark-blue fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">CHROMA</a>
@@ -57,18 +50,18 @@
   </nav>
 
   <header class="masthead">
-      <div class="container h-100">
-          <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end">
-              <h1 class="text-uppercase text-white font-weight-bold">CHROMA</h1>
-              <hr class="header-divider" />
-            </div>
-            <div class="col-lg-8 align-self-baseline">
-              <h2 class="text-white font-weight-bold mb-5">Colour Theory + Bioinformatics</h3>
-              <a class="btn btn-outline-light btn-lg js-scroll-trigger" href="#about">Find Out More</a>
-            </div>
-          </div>
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold">CHROMA</h1>
+          <hr class="header-divider" />
         </div>
+        <div class="col-lg-8 align-self-baseline">
+          <h2 class="text-white font-weight-bold mb-5">Colour Theory + Bioinformatics</h3>
+            <a class="btn btn-outline-light btn-lg js-scroll-trigger" href="#about">Find Out More</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <section class="py-5" id="about">
@@ -80,24 +73,27 @@
             <hr class="section-header-divider" />
           </div>
           <p class="lead">
-            CHROMA is a revolutionary bioinformatics and design pipeline that assigns all known human genes a "colour profile". 
-            We believe that every human gene has a number of features that can be mapped to colour theory principles. 
-            These principles have guided the development of brands, logos, and colour palettes for 
-            more than 50 years. And now, we believe it is time for colour theory to help researchers 
-            gain new insights into all of the genes in the human genome.
+            CHROMA is a revolutionary bioinformatics and design pipeline that assigns all known human genes a "colour
+            profile".
+            We believe that every human gene has a number of features that can be mapped to colour theory principles.
+            These principles have guided the development of brands, logos, and colour palettes for more than 50 years.
+            We believe it is time for colour theory to help researchers gain new insights into all of the genes in the
+            human genome.
           </p>
           <p class="lead">
-              Here is a brief overview of our 3-step pipeline: 
-            </p>
+            Here is a brief overview of our 3-step pipeline:
+          </p>
           <ol>
             <li>We assemble a list of all known genes in the human genome from Ensembl</li>
-            <li>We annotate each gene by integrating data from a variety of bioinformatics sources, including ChEMBL, UniProt, and Open Targets</li>
-            <li>We map all gene annotations to colour theory principles</li>
+            <li>We annotate each gene by integrating data from a variety of bioinformatics sources, including ChEMBL,
+              UniProt, and Open Targets</li>
+            <li>We map all gene annotations and features to colour theory principles</li>
           </ol>
           <p class="lead">
-              To learn more about the pipeline, 
-              read <a href="https://www.google.com/search?q=nature+designs" target="_blank">our paper in Nature Designs</a> 
-              or check out <a href="https://github.com/andrewhercules/chroma" target="_blank">our code on GitHub</a>. 
+            To learn more about the pipeline,
+            read <a href="https://www.google.com/search?q=nature+designs" target="_blank">our paper in Nature
+              Designs</a>
+            or check out <a href="https://github.com/andrewhercules/chroma" target="_blank">our code on GitHub</a>.
           </p>
           <div class="text-center">
             <a class="btn btn-primary btn-lg js-scroll-trigger" href="#chroma-pipeline">Try it out!</a>
@@ -115,108 +111,86 @@
             <h2>Try CHROMA</h2>
             <hr class="section-header-divider" />
           </div>
-          
           <div id="run-pipeline-block">
             <p class="lead">
               To run the CHROMA pipeline, please answer two questions:
             </p>
-            <div>
-                <form>
-                      <div class="form-group">
-                        <label for="select-reserach-area" class="font-weight-bold">What is your research focus area?</label>
-                        <select id="select-reserach-area" class="form-control">
-                          <option disabled selected>Select ...</option>
-                          <option value="oncology">Oncology</option>
-                          <option value="neurodegeneration">Neurology</option>
-                          <option value="immunology">Cardiology</option>
-                          <option value="endocrinology">Endocrinology</option>
-                          <option value="pulmonology">Pulmonology</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-
-
-                      <div class="form-group">
-                        <label for="inputEmail4" class="font-weight-bold">What is your favourite colour?</label>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                          <label class="form-check-label" for="exampleRadios1">
-                            Blue
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                          <label class="form-check-label" for="exampleRadios2">
-                            Brown
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                          <label class="form-check-label" for="exampleRadios2">
-                            Green
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                          <label class="form-check-label" for="exampleRadios2">
-                            Orange
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                          <label class="form-check-label" for="exampleRadios2">
-                            Pink
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                          <label class="form-check-label" for="exampleRadios2">
-                            Purple
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                          <label class="form-check-label" for="exampleRadios2">
-                            Red
-                          </label>
-                        </div>
-        
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                          <label class="form-check-label" for="exampleRadios2">
-                            Yellow
-                          </label>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <button class="btn btn-primary" id="run-pipeline-btn">Run pipeline</button>
-                      </div>
-
-        
-        
-        
-                  </form>
-
-            </div>
-                
+            <form>
+              <div class="form-group">
+                <label for="select-reserach-area" class="font-weight-bold">What is your research focus area?</label>
+                <select id="select-reserach-area" class="form-control">
+                  <option disabled selected>Select ...</option>
+                  <option value="oncology">Oncology</option>
+                  <option value="neurodegeneration">Neurology</option>
+                  <option value="immunology">Cardiology</option>
+                  <option value="endocrinology">Endocrinology</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail4" class="font-weight-bold">What is your favourite colour?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="select-colour" id="select-colour-blue" value="blue">
+                  <label class="form-check-label" for="select-colour-blue">
+                    Blue
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="select-colour" id="select-colour-brown" value="brown">
+                  <label class="form-check-label" for="select-colour-brown">
+                    Brown
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="select-colour" id="select-colour-green" value="green">
+                  <label class="form-check-label" for="select-colour-green">
+                    Green
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="select-colour" id="select-colour-orange" value="orange">
+                  <label class="form-check-label" for="select-colour-orange">
+                    Orange
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="select-colour" id="select-colour-pink" value="pink">
+                  <label class="form-check-label" for="select-colour-pink">
+                    Pink
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="select-colour" id="select-colour-purple" value="purple">
+                  <label class="form-check-label" for="select-colour-purple">
+                    Purple
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="select-colour" id="select-colour-red" value="red">
+                  <label class="form-check-label" for="select-colour-red">
+                    Red
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="select-colour" id="select-colour-yellow" value="yellow">
+                  <label class="form-check-label" for="select-colour-yellow">
+                    Yellow
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" id="run-pipeline-btn">Run pipeline</button>
+              </div>
+            </form>
           </div>
-
           <div class="loader mt-5"></div>
-
-
-
-
         </div>
-
-
-
         <div class="col-lg-8 mx-auto card py-4" id="pipeline-results">
           <h3>
             <span id="gene-name"></span> - <span id="gene-description"></span>
           </h3>
           <p>
-            <span class="font-weight-bold">CHROMA colour:</span> 
+            <span class="font-weight-bold">CHROMA colour:</span>
             <span id="gene-colour-profile"></span>
           </p>
           <p>
@@ -224,30 +198,28 @@
             <span id="gene-pipeline-assessment"></span>
           </p>
           <span class="font-weight-bold">Links:</span>
-              <button class="btn btn-light mx-2">
-                  <a id="gene-open-targets-link" target="_blank">Open Targets</a>
-                </button>
-                <button class="btn btn-light mx-2">
-                  <a id="gene-ensembl-link" target="_blank">Ensembl</a>
-                </button>
-                <button class="btn btn-light mx-2">
-                  <a id="gene-uniprot-link" target="_blank">UniProt</a>
-                </button>
-                <button class="btn btn-light mx-2">
-                  <a id="gene-genecards-link" target="_blank">GeneCards</a>
-                </button>
-                <button class="btn btn-light mx-2">
-                  <a id="gene-gnomad-link" target="_blank">gnomAD</a>
-                </button>
+          <button class="btn btn-light mx-2">
+            <a id="gene-open-targets-link" target="_blank">Open Targets</a>
+          </button>
+          <button class="btn btn-light mx-2">
+            <a id="gene-ensembl-link" target="_blank">Ensembl</a>
+          </button>
+          <button class="btn btn-light mx-2">
+            <a id="gene-uniprot-link" target="_blank">UniProt</a>
+          </button>
+          <button class="btn btn-light mx-2">
+            <a id="gene-genecards-link" target="_blank">GeneCards</a>
+          </button>
+          <button class="btn btn-light mx-2">
+            <a id="gene-gnomad-link" target="_blank">gnomAD</a>
+          </button>
           <div class="mt-5 text-center">
-              <p>Want to try the pipeline again?</p>
-              <button class="btn btn-small btn-primary text-center mx-2" id="rerun-pipeline-btn">Re-run pipeline</button>
-              <button class="btn btn-small btn-primary text-center mx-2" id="clear-pipeline-results-btn">Start over</button>
+            <p>Want to try the pipeline again?</p>
+            <button class="btn btn-small btn-primary text-center mx-2" id="rerun-pipeline-btn">Re-run pipeline</button>
+            <button class="btn btn-small btn-primary text-center mx-2" id="clear-pipeline-results-btn">Start
+              over</button>
           </div>
-            
-          
         </div>
-
       </div>
     </div>
   </section>
@@ -260,46 +232,40 @@
             <h2>Citation</h2>
             <hr class="section-header-divider" />
           </div>
-          
           <p class="lead">
-            If you have used the results from the CHROMA pipeline, 
-            please cite <a href="https://www.google.com/search?q=nature+designs" target="_blank">our paper in Nature Designs</a>.
+            If you have used the results from the CHROMA pipeline,
+            please cite <a href="https://www.google.com/search?q=nature+designs" target="_blank">our paper in Nature
+              Designs</a>.
           </p>
         </div>
-
         <div class="col-lg-8 mx-auto" id="citation-block">
-
           <form class="form-inline">
             <div class="form-row">
               <div class="form-group mr-sm-2 mb-3">
                 <select class="form-control" id="selectCitationStyle" name="selectCitationStyle">
                   <option disabled selected>Select citation style ...</option>
-                  <option value="apa">APA</option>
-                  <option value="mla">MLA</option>
-                  <option value="chicago">Chicago</option>
-                  <option value="harvard">Harvard</option>
-                  <option value="oxford">Oxford</option>
+                  <option value="APA">APA</option>
+                  <option value="MLA">MLA</option>
+                  <option value="Chicago">Chicago</option>
+                  <option value="Harvard">Harvard</option>
+                  <option value="Oxford">Oxford</option>
                 </select>
               </div>
               <button class="btn btn-primary mb-3" id="get-citation-btn">Get citation</button>
             </div>
           </form>
         </div>
-
-
         <div class="col-lg-8 mx-auto card text-center py-4" id="citation-results">
-            <h5>Citation</h5>
-            <p id="citation-text"></p>
-            <button class="btn btn-light mx-2">Copy to clipboard</button>
-            <button class="btn btn-light mx-2">Download RefWorks</button>
-            <button class="btn btn-light mx-2">Download EndNote</button>
-          </div>
-
+          <h3>Citation</h3>
+          <p id="citation-text"></p>
+          <button class="btn btn-light mx-2">Copy to clipboard</button>
+          <button class="btn btn-light mx-2">Download RefWorks</button>
+          <button class="btn btn-light mx-2">Download EndNote</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="py-5 bg-dark-blue">
     <div class="container">
       <p class="m-0 text-center text-white text-uppercase">
@@ -313,27 +279,26 @@
         ** Credits **
       </p>
       <p class="m-0 text-center text-white">
-          Colour palette: <a href="https://www.colourlovers.com/palette/559067/Nobody_Sugar">Nobody Sugar</a> 
-          |
-          Header photo: <a href="https://pixabay.com/illustrations/dna-genetic-material-helix-proteins-3539309/">DNA Genetic Material</a>
+        Colour palette: <a href="https://www.colourlovers.com/palette/559067/Nobody_Sugar">Nobody Sugar</a>
+        |
+        Header photo: <a href="https://pixabay.com/illustrations/dna-genetic-material-helix-proteins-3539309/">DNA
+          Genetic Material</a>
       </p>
     </div>
   </footer>
-
-  <div id="pipeline-running-animation"></div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Plugin JavaScript -->
+  <!-- jQuery plugin for scrolling  -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom JavaScript for this theme -->
+  <!-- Custom JavaScript for CHROMA app -->
   <script src="js/scrolling-nav.js"></script>
-
   <script src="js/genes.js"></script>
-  <script src="js/application.js"></script>
+  <script src="js/citations.js"></script>
+  <script src="js/chroma-app.js"></script>
 
 </body>
 

@@ -1,12 +1,3 @@
-citations = {
-  "apa": "Hercules, A & Averbrook, G. (2019). Target Of The Year: the application of colour theory and design to bioinformatics. Nature Design, 1(1), 5-10.",
-  "chicago": 'Hercules, Andrew and Gillian Averbrook. "Target Of The Year: the application of colour theory and design to bioinformatics." Nature Design 1, no. 1 (2019): 5-10',
-  "harvard": "Hercules, A & Averbrook, G 2019, 'Target Of The Year: the application of colour theory and design to bioinformatics', Nature Design, vol. 1, no. 1, pp. 5-10.",
-  "mla": 'Hercules, Andrew and Averbrook, Gillian. "Target Of The Year: the application of colour theory and design to bioinformatics." Nature Design, vol. 1, no. 1, 2019, pp. 5-10.',
-  "oxford": "Hercules, A. and G. Averbrook, 'Target Of The Year: the application of colour theory and design to bioinformatics',  Nature Design, vol. 1, no. 1, 2019, pp. 5-10."
-},
-
-
 $(document).ready(function () {
   // $('#get-citation-btn').hide();
 });
