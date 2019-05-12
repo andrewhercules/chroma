@@ -1,107 +1,88 @@
 /* Import Inter font and set as default on page */
 
-@import url('https://rsms.me/inter/inter.css');
-*, html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-*, html { font-family: 'Inter var', sans-serif; }
-}
+  @import url('https://rsms.me/inter/inter.css');
+  *, html { font-family: 'Inter', sans-serif; }
+  @supports (font-variation-settings: normal) {
+  *, html { font-family: 'Inter var', sans-serif; }
+  }
 
-*, html {
-  color: #2D2D29;
-}
+/* Set default font colour */
 
-.masthead {
-  height: 100vh;
-  min-height: 500px;
-  background-image: url('/img/masthead-img.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+  *, html {
+    color: #2D2D29;
+  }
 
-#pipeline-running-animation {
-  /* display:    none;
-  position:   fixed;
-  z-index:    1000;
-  top:        0;
-  left:       0;
-  height:     100%;
-  width:      100%;
-  background: rgba( 255, 255, 255, .8 ) 
-              url('http://sampsonresume.com/labs/pIkfp.gif') 
-              50% 50% 
-              no-repeat; */
-}
+/* Style masthead section layout and background */
 
+  .masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('/img/masthead-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
+  .header-divider {
+    width: 500px;
+    height: 5px;
+    background-color: white;
+  }
 
-/* Anytime the body has the loading class, our
-   modal element will be visible */
-body.loading #pipeline-running-animation {
+/* Show and hide sections that will be toggled with logic in chroma-app.js file */
+
+  #pipeline-results,
+  #citation-results,
+  #get-citation-btn {
+    display: none;
+  }
+
+  body.finished-loading #pipeline-results,
+  body.citation-style-selected #citation-results {
     display: block;
-}
+  }
 
-#pipeline-results,
-#citation-results {
-  display: none;
-}
+/* Overall app styling */
 
-body.finished-loading #pipeline-results {
-  display: block;
-}
+  .section-header-divider {
+    width: 300px;
+    height: 2px;
+    background-color: #215A6D
+  }
 
-body.citation-style-selected #citation-results {
-  display: block;
-}
+  .bg-dark-blue {
+    background-color: #2D2D29;
+  }
 
-.header-divider {
-  width: 500px;
-  height: 5px;
-  background-color: white;
-}
+/* Bootstrap overrides */
 
-.section-header-divider {
-  width: 300px;
-  height: 2px;
-  background-color: #215A6D
-}
+  h1 {
+    font-size: 110px;
+  }
 
-h1 {
-  font-size: 110px;
-}
+  .btn-primary {
+    background-color: #215A6D;
+    border: 1px solid #215A6D;
+  }
 
+  .btn-primary:hover {
+    background-color: #215A6D;
+    opacity: 0.75;
+  }
 
-.bg-dark-blue {
-  background-color: #2D2D29;
-}
+  a,
+  a:hover {
+    color: #3CA2A2
+  }
 
-.btn-primary {
-  background-color: #215A6D;
-  border: 1px solid #215A6D;
-}
+  .btn:focus,.btn:active {
+    background-color: orange
+    border: 1px solid #215A6D;
+    outline: none !important;
+    box-shadow: none;
+  }
 
-.btn-primary:hover {
-  background-color: #215A6D;
-  opacity: 0.75;
-}
-
-a,
-a:hover {
-  color: #3CA2A2
-}
-
-#get-citation-btn {
-  display: none;
-}
-
-/* .btn:focus,.btn:active {
-  background-color: orange
-  border: 1px solid #215A6D;
-  outline: none !important;
-  box-shadow: none;
-} */
-
-
+/* Pipeline running animation */
 
 .loader {
   display: none;
