@@ -1,15 +1,14 @@
 $(document).ready(function () {
 
-  
   // Show all tooltips
-  $('[data-toggle="tooltip"]').tooltip(); 
+  $('[data-toggle="tooltip"]').tooltip();
 
   // Log that user has hovered on the colour theory definition tooltip
-  $('#colour-theory-tooltip').hover(function() {
+  $('#colour-theory-tooltip').hover(function () {
     console.log('hovering on colour theory definition tooltip')
   });
-  
-  
+
+
 
   // After user has answered two questions, run pipeline to generate and display response after 3 seconds
   $('#run-pipeline-btn').on("click", function (event) {
@@ -20,8 +19,8 @@ $(document).ready(function () {
     }, 3000);
   });
 
-   // After user has run pipeline for the first time, if they select 'Re-run pipeline', run the same pipeline 
-   $('#rerun-pipeline-btn').on("click", function (event) {
+  // After user has run pipeline for the first time, if they select 'Re-run pipeline', run the same pipeline 
+  $('#rerun-pipeline-btn').on("click", function (event) {
     $('#pipeline-results').hide();
     startPipeline(event);
     setTimeout(function () {
@@ -33,7 +32,7 @@ $(document).ready(function () {
   // Initialise and start CHROMA pipeline
   function startPipeline(event) {
     event.preventDefault();
-    $("body").addClass("loading"); 
+    $("body").addClass("loading");
     console.log('pipeline started')
   }
 
@@ -84,3 +83,30 @@ $(document).ready(function () {
   });
 
 });
+
+// Utility Google Analytics functions
+
+// function trackEvent(category, action, label, value) {
+
+// ga('send', 'event', category, action, label, value);
+
+// ga('send', {
+//   hitType: 'event',
+//   eventCategory: category,
+//   eventAction: action,
+//   eventLabel: label,
+//   eventValue: value,
+//   nonInteraction: true (provide info on this from GA docs)
+// });
+
+// Alerts the user when a hit is sent.
+// ga('send', 'pageview', {
+//   'hitCallback': function () {
+//     alert('hit sent');
+//   }
+// });
+
+
+// }
+
+// ga('send', 'event', 'Video', 'play', 'cats.mp4');
