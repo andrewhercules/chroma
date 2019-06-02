@@ -14,10 +14,10 @@
 
 /* Style masthead section layout and background */
 
-  .masthead {
+  header.masthead {
     height: 100vh;
     min-height: 500px;
-    background-image: url('/img/masthead-img.jpg');
+    background-image: url('/img/masthead.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
