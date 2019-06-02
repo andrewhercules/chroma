@@ -17,7 +17,7 @@
   header.masthead {
     height: 100vh;
     min-height: 500px;
-    background-image: url('/img/masthead.jpg');
+    background-image: url('http://andrewhercules.com/chroma/img/masthead.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
