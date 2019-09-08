@@ -8,8 +8,6 @@ $(document).ready(function () {
     console.log('hovering on colour theory definition tooltip')
   });
 
-
-
   // After user has answered two questions, run pipeline to generate and display response after 3 seconds
   $('#run-pipeline-btn').on("click", function (event) {
     $('#run-pipeline-block').hide();
@@ -24,7 +22,6 @@ $(document).ready(function () {
     $('#pipeline-results').hide();
     startPipeline(event);
     setTimeout(function () {
-      $('#pipeline-results').show();
       chromaPipeline();
     }, 3000);
   });
@@ -43,6 +40,7 @@ $(document).ready(function () {
     $('#run-pipeline-btn').hide();
     selectGene()
     console.log('pipeline finished')
+    $('#pipeline-results').show();
   }
 
   // Using array found in genes.js file, select a random gene to mock pipeline process and update UI with results
