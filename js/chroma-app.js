@@ -6,22 +6,29 @@ $(document).ready(function () {
   // Log that user has hovered on the colour theory definition tooltip
   $('#colour-theory-tooltip').hover(function () {
     console.log('hovering on colour theory definition tooltip')
+    ga('send', 'event', 'Tooltip', 'hover', 'colour-theory-definition');
+  });
+
+  $('#colour-theory-tooltip').hover(function () {
+    console.log('clicked to visit website with definition of colour theory')
+    ga('send', 'event', 'Tooltip', 'click', 'colour-theory-definition');
   });
 
   // After user has answered two questions, initalise and run pipeline, and display response after 3 seconds
   $('#run-pipeline-btn').on('click', function (event) {
     event.preventDefault();
-    console.log('CHROMA pipeline has started')
+    times = [2000, 3000, 4000, 5000, 6000];
+    pipelineRuntime = times[Math.floor(Math.random() * times.length)];
     $('#run-pipeline-block').hide();
     $('body').addClass('loading');
     console.log('CHROMA pipeline is running')
     setTimeout(function () {
-      runCHROMAPipeline();
-    }, 3000);
+      runCHROMAPipeline(pipelineRuntime);
+    }, pipelineRuntime);
   });
 
   // run CHROMA pipeline
-  function runCHROMAPipeline() {
+  function runCHROMAPipeline(pipelineRuntime) {
     $('body').removeClass('loading');
     $('body').addClass('finished-loading');
     $('#run-pipeline-btn').hide();
@@ -29,6 +36,7 @@ $(document).ready(function () {
     updateUI(randomGene);
     $('#pipeline-results').show();
     console.log('CHROMA pipeline has finished')
+    ga('send', 'event', 'Pipeline', 'CHROMA', 'completed', pipelineRuntime/1000 );
   }
 
   // Using array found in genes.js file, select a random gene to mock pipeline process, and update UI with results
@@ -71,6 +79,7 @@ $(document).ready(function () {
     console.log('Showing ' + selectedCitationStyle + ' citation' )
     $('#citation-style').text(selectedCitationStyle);
     $('#citation-text').text(citationText);
+    ga('send', 'event', 'Citation', 'download', selectedCitationStyle);
   });
 
 });
