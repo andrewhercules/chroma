@@ -83,30 +83,3 @@ $(document).ready(function () {
   });
 
 });
-
-// Utility Google Analytics functions
-
-// function trackEvent(category, action, label, value) {
-
-// ga('send', 'event', category, action, label, value);
-
-// ga('send', {
-//   hitType: 'event',
-//   eventCategory: category,
-//   eventAction: action,
-//   eventLabel: label,
-//   eventValue: value,
-//   nonInteraction: true (provide info on this from GA docs)
-// });
-
-// Alerts the user when a hit is sent.
-// ga('send', 'pageview', {
-//   'hitCallback': function () {
-//     alert('hit sent');
-//   }
-// });
-
-
-// }
-
-// ga('send', 'event', 'Video', 'play', 'cats.mp4');
