@@ -111,8 +111,8 @@ body.loading .loader {
   display: block;
 }
 
-.tooltip-text-link,
-.tooltip-text-link:hover {
+#colour-psychology-tooltip,
+#colour-psychology-tooltip:hover {
   text-decoration: none;
   border-bottom: 2px dotted #3CA2A2;
 }

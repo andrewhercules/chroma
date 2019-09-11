@@ -10,8 +10,7 @@ $(document).ready(function () {
   });
 
   // Log that user has clicked on the colour psychology definition tooltip
-  $('#colour-psychology-tooltip').on('click', function(event) {
-    event.preventDefault();
+  $('#colour-psychology-tooltip').on('click', function() {
     console.log('clicked to visit website with definition of colour psychology')
     ga('send', 'event', 'Tooltip', 'click', 'colour-psychology-definition');
   });
