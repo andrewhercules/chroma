@@ -3,17 +3,19 @@ $(document).ready(function () {
   // Show all tooltips
   $('[data-toggle="tooltip"]').tooltip();
 
-  // Log that user has hovered on the colour theory definition tooltip
-  $('#colour-theory-tooltip').hover(function () {
-    console.log('hovering on colour theory definition tooltip')
-    ga('send', 'event', 'Tooltip', 'hover', 'colour-theory-definition');
+  // Log that user has hovered on the colour psychology definition tooltip
+  $('#colour-psychology-tooltip').hover(function () {
+    console.log('hovering on colour psychology definition tooltip')
+    ga('send', 'event', 'Tooltip', 'hover', 'colour-psychology-definition');
   });
 
-  $('#colour-theory-tooltip').hover(function () {
-    console.log('clicked to visit website with definition of colour theory')
-    ga('send', 'event', 'Tooltip', 'click', 'colour-theory-definition');
+  // Log that user has clicked on the colour psychology definition tooltip
+  $('#colour-psychology-tooltip').on('click', function(event) {
+    event.preventDefault();
+    console.log('clicked to visit website with definition of colour psychology')
+    ga('send', 'event', 'Tooltip', 'click', 'colour-psychology-definition');
   });
-
+  
   // After user has answered two questions, initalise and run pipeline, and display response after 3 seconds
   $('#run-pipeline-btn').on('click', function (event) {
     event.preventDefault();
@@ -36,14 +38,15 @@ $(document).ready(function () {
     updateUI(randomGene);
     $('#pipeline-results').show();
     console.log('CHROMA pipeline has finished')
-    ga('send', 'event', 'Pipeline', 'CHROMA', 'completed', pipelineRuntime/1000 );
+    ga('send', 'event', 'Pipeline', 'CHROMA', 'completed', pipelineRuntime/1000);
   }
 
-  // Using array found in genes.js file, select a random gene to mock pipeline process, and update UI with results
+  // Using array found in genes.js file, select a random gene to mock pipeline process
   function selectGene() {
     return genes[Math.floor(Math.random() * genes.length)];
   }
 
+  // Update UI with gene information
   function updateUI(randomGene) {
     $('#gene-name').text(randomGene.hgncSymbol);
     $('#gene-description').text(randomGene.description);
@@ -68,18 +71,13 @@ $(document).ready(function () {
   // Show 'Get citation' button after user has selected a citation style from the drop-down menu
   $('select[name="selectCitationStyle"]').change(function () {
     $('#get-citation-btn').css('display', 'inline-block')
-  });
-
-  // When user clicks on 'Get citation' button, get the relevant citation and display
-  $('#get-citation-btn').on('click', function (event) {
-    event.preventDefault();
     $('body').addClass('citation-style-selected');
     var selectedCitationStyle = $('#selectCitationStyle').val()
     var citationText = citations[selectedCitationStyle];
-    console.log('Showing ' + selectedCitationStyle + ' citation' )
     $('#citation-style').text(selectedCitationStyle);
     $('#citation-text').text(citationText);
-    ga('send', 'event', 'Citation', 'download', selectedCitationStyle);
+    console.log('Showing ' + selectedCitationStyle + ' citation' )
+    ga('send', 'event', 'Citation', 'show', selectedCitationStyle);
   });
 
 });
