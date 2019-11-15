@@ -65,6 +65,8 @@ $(document).ready(function () {
     $('#pipeline-results').hide();
     $('#run-pipeline-btn').show();
     $('#run-pipeline-block').show();
+    // console.log('Start over button clicked')
+    // ga('send', 'event', 'Button', 'click', 'Pipeline-StartOver');
   });
 
   // Show 'Get citation' button after user has selected a citation style from the drop-down menu
